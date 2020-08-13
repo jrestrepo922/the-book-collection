@@ -43,3 +43,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # sends the specified attributes to the frontend in JSON
 # rails g serializer book
 gem 'active_model_serializers'
+
+gem 'pry'

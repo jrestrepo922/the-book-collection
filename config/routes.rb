@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :genres, only: [:index, :new, :create] do 
+  resources :genres, only: [:index, :new, :create, :destroy] do 
 
     resources :books, only:[:new, :create, :edit, :update, :destroy, :index, :show]
   end

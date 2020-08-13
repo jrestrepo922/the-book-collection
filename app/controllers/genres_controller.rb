@@ -1,3 +1,4 @@
+require 'pry'
 class GenresController < ApplicationController
   before_action :set_genre, only: [:show, :update, :destroy]
 
@@ -11,12 +12,10 @@ class GenresController < ApplicationController
 
   # POST /genres
   def create
-    @genre = Genre.new(genre_params)
-
+    @genre = Genre.find_or_create_by(genre_params)
+    # @genre = Genre.new(genre_params)
     if @genre.save
-      render json: @genre, status: :created, location: @genre
-    else
-      render json: @genre.errors, status: :unprocessable_entity
+      render json: @genre
     end
   end
 
@@ -29,7 +28,10 @@ class GenresController < ApplicationController
   #   end
   # end
 
-
+def destroy
+  @books = @genre.books.destroy_all
+  @genre.destroy
+end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
