@@ -49,6 +49,6 @@ class BooksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def book_params
-      params.require(:book).permit(:title, :description, :author, :completed, :format, :image, :genre_id)
+      params.require(:book).permit(:title, :description, :author, :completed, :format, :image, :genre_id, :wishlist_item)
     end
 end

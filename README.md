@@ -37,7 +37,7 @@ require 'active_model_serializers'
 
 ## Starting Out the APP 
 
-To start the APP please put in the terminal ```bundle install```. Next run ```rails s``` on the termial to start the server. 
+To start the APP please put in the terminal ```bundle install```. Next run ```rails s``` on the termial to start the server. For the front end file type ```npm start``` in the terminal to get started. 
 
 ## Contributing 
 

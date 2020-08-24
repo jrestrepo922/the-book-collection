@@ -8,6 +8,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.string :format
       t.string :image
       t.integer :genre_id
+      t.boolean :wishlist_item, default: false
 
       t.timestamps
     end

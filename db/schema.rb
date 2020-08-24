@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_08_10_130645) do
     t.string "format"
     t.string "image"
     t.integer "genre_id"
+    t.boolean "wishlist_item", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
